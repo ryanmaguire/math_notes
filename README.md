@@ -1,2 +1,2 @@
-# math_notes
+# Math Notes
 Notes on various mathematical topics.
