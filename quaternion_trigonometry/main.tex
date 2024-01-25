@@ -534,18 +534,19 @@
             immediate that our formulas should hold. Let $q\in\mathbb{H}$ be
             a quaternion, and suppose $\mathbf{u}\in\mathbb{H}$ is a unit
             imaginary quaternion. That is,
-            $\mathbf{u}+ib+jc+kd$ for some $b,c,d\in\mathbb{R}$ and
+            $\mathbf{u}=ib+jc+kd$ for some $b,c,d\in\mathbb{R}$ and
             $||\mathbf{u}||=1$. Furthermore, suppose $\mathbf{u}$ commutes with
-            $q$: $\mathbf{u}q=q\mathbf{u}$. If this is true, then by induction
+            $q$, $\mathbf{u}q=q\mathbf{u}$. If this is true, then by induction
             we have $(\mathbf{u}q)^{n}=\mathbf{u}^{n}q^{n}$ for all
             $n\in\mathbb{N}$. Using this we obtain:
             \begin{subequations}
                 \begin{align}
                     \exp(\mathbf{u}q)
                     &=\sum_{n=0}^{\infty}\frac{(\mathbf{u}q)^{n}}{n!}\\
-                    &=\sum_{n=0}^{\infty}u^{n}\frac{q^{n}}{n!}\\
-                    &=\sum_{n=0}^{\infty}u^{2n}\frac{q^{2n}}{(2n)!}
-                        +\sum_{n=0}^{\infty}u^{2n+1}\frac{q^{2n+1}}{(2n+1)!}\\
+                    &=\sum_{n=0}^{\infty}\mathbf{u}^{n}\frac{q^{n}}{n!}\\
+                    &=\sum_{n=0}^{\infty}\mathbf{u}^{2n}\frac{q^{2n}}{(2n)!}
+                        +\sum_{n=0}^{\infty}
+                        \mathbf{u}^{2n+1}\frac{q^{2n+1}}{(2n+1)!}\\
                     &=\sum_{n=0}^{\infty}(-1)^{n}\frac{q^{2n}}{(2n)!}
                         +\mathbf{u}
                         \sum_{n=0}^{\infty}(-1)^{n}\frac{q^{2n+1}}{(2n+1)!}\\
@@ -564,7 +565,8 @@
                 =(a+\mathbf{v})\hat{\mathbf{v}}
                 =q\hat{\mathbf{v}}
             \end{equation}
-            Since $\hat{\mathbf{v}}a$ and $\hat{\mathbf{v}}\mathbf{v}$ commute
+            Since $\hat{\mathbf{v}}a=a\hat{\mathbf{v}}$ and
+            $\hat{\mathbf{v}}\mathbf{v}=\mathbf{v}\hat{\mathbf{v}}$
             we have:
             \begin{equation}
                 \exp\big(\hat{\mathbf{v}}(a+\mathbf{v})\big)=
@@ -587,7 +589,16 @@
                         \Big)
                 \end{align}
             \end{subequations}
-            Repeating this calculation with $\mathbf{u}=-\hat{\mathbf{v}}$,
+            It would be nice to say
+            \textit{compare the real and imaginary parts}, just as we did with
+            Euler's formula for complex numbers, but
+            $\cos(a+\mathbf{v})$ and
+            $\cos(a)\cos(\mathbf{v})-\sin(a)\sin(\mathbf{v})$ may have both
+            real and imaginary components. Similarly,
+            $\sin(a+\mathbf{v})$ and
+            $\sin(a)\cos(\mathbf{v})+\cos(a)\sin(\mathbf{v})$ may have mixed
+            parts, so we can't guarantee equality here. However,
+            repeating this calculation with $\mathbf{u}=-\hat{\mathbf{v}}$,
             which still commutes with $q=a+\mathbf{v}$, shows that we can cancel
             to obtain:
             \begin{align}
